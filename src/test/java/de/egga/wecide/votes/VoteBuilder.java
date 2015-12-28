@@ -19,4 +19,7 @@ public class VoteBuilder {
     public static List<Vote> oneNeutral() {
         return asList(new Vote(NEUTRAL));
     }
+    public static List<Vote> moreThanHalfInFavor() {
+        return asList(new Vote(FOR), new Vote(FOR), new Vote(AGAINST));
+    }
 }
