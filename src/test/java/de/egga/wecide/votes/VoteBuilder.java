@@ -9,7 +9,7 @@ import static java.util.Arrays.asList;
 
 public class VoteBuilder {
 
-    public static List<Vote> OneInFavor() {
+    public static List<Vote> oneInFavor() {
         return asList(new Vote(FOR));
     }
 
