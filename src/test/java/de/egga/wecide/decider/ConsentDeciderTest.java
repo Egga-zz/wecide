@@ -13,14 +13,14 @@ public class ConsentDeciderTest {
     private final ConsentDecider decider = new ConsentDecider();
 
     @Test
-    public void consent_is_reached_when_all_votes_are_in_favor() {
-        DecisionStatus decision = decider.evaluateVotes(oneInFavor());
+    public void consent_is_reached_when_all_votes_are_pro() {
+        DecisionStatus decision = decider.evaluateVotes(onePro());
         assertThat(decision).isEqualTo(PRO);
     }
 
     @Test
-    public void consent_is_not_reached_when_a_single_vote_is_against() {
-        DecisionStatus decision = decider.evaluateVotes(oneAgainst());
+    public void consent_is_not_reached_when_a_single_vote_is_con() {
+        DecisionStatus decision = decider.evaluateVotes(oneCon());
         assertThat(decision).isEqualTo(CON);
     }
 

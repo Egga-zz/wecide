@@ -10,10 +10,10 @@ public class MajorityDecider implements Decider {
     @Override
     public DecisionStatus evaluateVotes(List<Vote> votes) {
 
-        long votesInFavor = votes.stream().filter(v -> v.isInFavor()).count();
+        long numberOfProVotes = votes.stream().filter(v -> v.isPro()).count();
         float halfOfTheVotes = (float) votes.size() / 2;
 
-        if (votesInFavor > halfOfTheVotes) {
+        if (numberOfProVotes > halfOfTheVotes) {
             return DecisionStatus.PRO;
         } else {
             return DecisionStatus.CON;

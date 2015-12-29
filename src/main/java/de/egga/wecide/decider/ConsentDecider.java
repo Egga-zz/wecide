@@ -9,7 +9,7 @@ public class ConsentDecider implements Decider {
 
     public DecisionStatus evaluateVotes(List<Vote> votes) {
         for (Vote vote : votes) {
-            if (vote.isAgainst()) {
+            if (vote.isCon()) {
                 return DecisionStatus.CON;
             }
         }

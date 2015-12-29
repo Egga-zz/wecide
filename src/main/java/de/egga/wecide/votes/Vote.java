@@ -1,7 +1,7 @@
 package de.egga.wecide.votes;
 
-import static de.egga.wecide.votes.VoteStatus.AGAINST;
-import static de.egga.wecide.votes.VoteStatus.FOR;
+import static de.egga.wecide.votes.VoteStatus.CON;
+import static de.egga.wecide.votes.VoteStatus.PRO;
 
 public class Vote {
 
@@ -11,15 +11,15 @@ public class Vote {
         this.status = status;
     }
 
-    public boolean isAgainst() {
-        if (status == AGAINST) {
+    public boolean isCon() {
+        if (status == CON) {
             return true;
         }
         return false;
     }
 
-    public boolean isInFavor() {
-        if (status == FOR) {
+    public boolean isPro() {
+        if (status == PRO) {
             return true;
         }
         return false;
