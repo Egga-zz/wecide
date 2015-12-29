@@ -1,19 +1,22 @@
 package de.egga.wecide.decider;
 
-import de.egga.wecide.decision.DecisionStatus;
 import de.egga.wecide.votes.Vote;
+import de.egga.wecide.votes.VoteStatus;
 
 import java.util.List;
 
+import static de.egga.wecide.votes.VoteStatus.*;
+
+
 public class ConsentDecider implements Decider {
 
-    public DecisionStatus evaluateVotes(List<Vote> votes) {
+    public VoteStatus evaluateVotes(List<Vote> votes) {
         for (Vote vote : votes) {
             if (vote.isCon()) {
-                return DecisionStatus.CON;
+                return CON;
             }
         }
 
-        return DecisionStatus.PRO;
+        return PRO;
     }
 }
