@@ -22,4 +22,7 @@ public class VoteBuilder {
     public static List<Vote> moreThanHalfInFavor() {
         return asList(new Vote(FOR), new Vote(FOR), new Vote(AGAINST));
     }
+    public static List<Vote> lessThanHalfInFavor() {
+        return asList(new Vote(FOR), new Vote(AGAINST), new Vote(AGAINST));
+    }
 }
