@@ -21,10 +21,10 @@ public class MainConfiguration {
         SpringApplication.run(MainConfiguration.class, args);
     }
 
-        @Bean
-        @Primary
-        @ConfigurationProperties(prefix = "spring.datasource")
-        public DataSource dataSource() {
-            return DataSourceBuilder.create().build();
+    @Bean
+    @Primary
+    @ConfigurationProperties(prefix = "spring.datasource")
+    public DataSource dataSource() {
+        return DataSourceBuilder.create().build();
     }
 }
