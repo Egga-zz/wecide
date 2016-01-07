@@ -56,3 +56,5 @@ idea {
         outputDir = file("$buildDir/classes/main/")
     }
 }
+
+task stage(dependsOn: ['assemble'])
