@@ -7,6 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.PropertySource;
 
 import javax.sql.DataSource;
 
@@ -15,6 +16,7 @@ import javax.sql.DataSource;
  */
 @ComponentScan(basePackages = "de.egga.wecide")
 @EnableAutoConfiguration
+@PropertySource("classpath:application.properties")
 public class MainConfiguration {
 
     public static void main(String[] args) throws Exception {
