@@ -2,13 +2,10 @@ language: java
 jdk:
 - oraclejdk8
 sudo: false
-
 deploy:
   provider: heroku
   api_key:
-    secure: KGXKsrwDyR3OA8jHzp1moWX+r/bUyncCVyuqN+74VONBy354QEXPR2CSSWLr0xmLFhNJkpXEBHGxPgYtirMtdVuWMIP1jjJe68ZhmuQEgtJewFvYUlheWzcT5+SDPJQzF0R4Zjf32dhILFIXq3GlnfuWj1XKmAOqMVUSpbHAbsQ=
+    secure: B2kQyOKEPQH9pQnjLkuchBdkVsJRdkweCDTd2kBtC8tf6EcJ23r8ljjVT96fW8kspk+hmLR1KzELpvTWrixW2hEsC9qLjAMsvNO/Ur8mnwNotJ+9/2D5W14JC8GlVkpSY3LmtI2/vTofRZfOqqM6qd3YEmwP1sPREOiyAXL0ODVgYX0SvoOQo4ReNOFicCW/evIBxRGNCDBdDvt4d3o2tJISdSEOhin/fSzQ/DtT9CdMHJlx99/2ARcsT7gGTE6TotcuPG1ihH1FTXMhtWrOEhG3zIIza3nhBjvxAoNu0DtBC8T9esL1BQIuEuUm1N/D50ejDwChYqQD3hJGsC3JXUDjeieWwp9IlCjQQBMusQrQimy1LhsUZZ/Co0yFaxYwOpKIoIFJrdR4fhYqj/M0le+73t49vxtQ3tLtiihpoipvC3IUUSsSwVhdN+BbfThIu9rMMXbHjcT5iUOwKlb8Rk4pS+cLyoHtWY5faSTzR/KWLTH5K1bJstG41DCA74loqRau54NS0i5FFNz8apLuBXc5ltX0JNd7bBqwuvCecmiZPfX9rLe1rZJc2Q+Ha5m72cs4QjoIram1gHjPRwTajD6+eotCwe9FHv2rY9K2g93OBDVYjEyARFwiMfR0ZS8AnYZqrLnE0apXE9AIm+re05KfpYLQ4MwmxxUAMFKg8E8=
   app: wecide
   on:
     repo: Egga/wecide
-
-
