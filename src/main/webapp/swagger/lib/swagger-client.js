@@ -365,7 +365,7 @@ Resolver.prototype.resolve = function(spec, callback, scope) {
     host = name;
 
     var obj = {
-      useJQuery: false,  // TODO
+      useJQuery: false,
       url: host,
       method: "get",
       headers: {
@@ -1460,9 +1460,6 @@ Operation.prototype.encodeQueryParam = function(arg) {
   return encodeURIComponent(arg);
 };
 
-/**
- * TODO revisit, might not want to leave '/'
- **/
 Operation.prototype.encodePathParam = function(pathParam) {
   var encParts, part, parts, i, len;
   pathParam = pathParam.toString();
