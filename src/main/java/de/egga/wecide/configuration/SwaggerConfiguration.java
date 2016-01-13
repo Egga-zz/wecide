@@ -28,8 +28,8 @@ public class SwaggerConfiguration {
 
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "BootKick API",
-                "Kickstarting APIs with Spring Boot",
+                "wecide API",
+                "Making decisions together",
                 null, null, null, null
         );
     }
