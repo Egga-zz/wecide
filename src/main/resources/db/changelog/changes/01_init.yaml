@@ -1,3 +1,4 @@
+# TODO replace by meaningful table defintion
 databaseChangeLog:
   - changeSet:
       id: 1

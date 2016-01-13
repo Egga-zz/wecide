@@ -1,4 +1,5 @@
 databaseChangeLog:
  - include:
    - file: "changes/01_init.yaml"
+   # TODO set this as default for all changesets
    - relativeToChangelogFile: true
