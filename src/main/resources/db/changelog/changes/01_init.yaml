@@ -5,7 +5,7 @@ databaseChangeLog:
       author: egga
       changes:
         - createTable:
-            tableName: eggOne
+            tableName: eggs
             columns:
               - column:
                   name: id
