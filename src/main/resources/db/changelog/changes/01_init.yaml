@@ -16,7 +16,8 @@ databaseChangeLog:
               - column:
                   name: name
                   type: varchar(50)
-                  nullable: false
+                  constraints:
+                    nullable: false
               - column:
                   name: state
                   type: char(2)
