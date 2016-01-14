@@ -2,8 +2,11 @@ package de.egga.wecide.eggs;
 
 public class Egg {
 
-    private final String name;
-    private final String state;
+    private String name;
+    private String state;
+
+    public Egg() {
+    }
 
     public Egg(String name, String state) {
         this.name = name;
@@ -14,7 +17,15 @@ public class Egg {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getState() {
         return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }
