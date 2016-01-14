@@ -23,6 +23,9 @@ dependencies {
         mavenCentral()
         jcenter()
     }
+    // TODO sort out unneeded dependencies
+    // TODO use latest versions of dependencies
+    // TODO structure dependencies nicely
     compile(
             'org.projectlombok:lombok:1.16.4',
             'org.apache.commons:commons-lang3:3.3.2',
@@ -30,6 +33,7 @@ dependencies {
             'com.mangofactory:swagger-springmvc:0.9.5',
             'org.postgresql:postgresql:9.4-1201-jdbc4',
             'org.liquibase:liquibase-core:3.4.2',
+            'org.modelmapper:modelmapper:0.7.5',
     )
     compile("org.springframework.boot:spring-boot-starter-web") {
         exclude module: "spring-boot-starter-tomcat"
