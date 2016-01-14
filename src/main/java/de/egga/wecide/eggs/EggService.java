@@ -1,6 +1,7 @@
 package de.egga.wecide.eggs;
 
 import de.egga.wecide.configuration.EggRepository;
+import de.egga.wecide.eggs.repository.EggEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -13,8 +14,8 @@ public class EggService {
     @Autowired
     EggRepository repository;
 
-    public Page<Egg> findAll() {
-        Page<Egg> all = repository.findAll(new PageRequest(1, 1));
+    public Page<EggEntity> findAll() {
+        Page<EggEntity> all = repository.findAll(new PageRequest(1, 1));
 
         return all;
     }

@@ -1,4 +1,4 @@
-package de.egga.wecide.eggs;
+package de.egga.wecide.eggs.repository;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -6,7 +6,7 @@ import java.io.Serializable;
 @Entity
 // TODO remove the table annotation
 @Table(name = "Eggs")
-public class Egg implements Serializable {
+public class EggEntity implements Serializable {
 
     @Id
     @GeneratedValue
@@ -20,12 +20,12 @@ public class Egg implements Serializable {
     private String state;
 
 
-    protected Egg() {
+    protected EggEntity() {
         // no-args constructor required by JPA spec
         // this one is protected since it shouldn't be used directly
     }
 
-    public Egg(String name, String state) {
+    public EggEntity(String name, String state) {
         this.name = name;
         this.state = state;
     }

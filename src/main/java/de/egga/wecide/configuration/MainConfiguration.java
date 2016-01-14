@@ -1,6 +1,6 @@
 package de.egga.wecide.configuration;
 
-import de.egga.wecide.eggs.Egg;
+import de.egga.wecide.eggs.repository.EggEntity;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 @ComponentScan(basePackages = "de.egga.wecide")
 @EnableAutoConfiguration
 // TODO find a better way to scan ALL entities
-@EntityScan(basePackageClasses=Egg.class)
+@EntityScan(basePackageClasses=EggEntity.class)
 @PropertySource("classpath:application.properties")
 public class MainConfiguration {
 
