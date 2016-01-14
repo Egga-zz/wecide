@@ -6,10 +6,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.orm.jpa.EntityScan;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 
 import javax.sql.DataSource;
 
@@ -28,9 +25,17 @@ public class MainConfiguration {
     }
 
     @Bean
+    @ConfigurationProperties(prefix = "spring.datasource.live")
+    public DataSource postgresDataSource() {
+        return DataSourceBuilder.create().build();
+    }
+
+    @Bean
     @Primary
-    @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource dataSource() {
+    @ConfigurationProperties(prefix = "spring.datasource.local")
+    @Profile("local")
+    // TODO move this to test configuration
+    public DataSource h2DataSource() {
         return DataSourceBuilder.create().build();
     }
 }

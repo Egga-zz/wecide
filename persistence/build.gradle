@@ -1,4 +1,0 @@
-jar {
-    baseName = 'wecide-persistence'
-    version = '1.0.0'
-}
