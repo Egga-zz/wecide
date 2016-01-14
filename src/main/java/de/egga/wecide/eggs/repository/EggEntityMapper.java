@@ -3,10 +3,12 @@ package de.egga.wecide.eggs.repository;
 import de.egga.wecide.eggs.Egg;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class EggEntityMapper {
 
     Egg entityToModel(EggEntity entity) {
@@ -15,12 +17,11 @@ public class EggEntityMapper {
         return model;
     }
 
-    List<Egg> entityToModel(Page<EggEntity> entities) {
+    public List<Egg> entityToModel(Page<EggEntity> entities) {
         ArrayList<Egg> model = new ArrayList<>();
         for (EggEntity entity : entities) {
             model.add(entityToModel(entity));
         }
-
         return model;
     }
 }

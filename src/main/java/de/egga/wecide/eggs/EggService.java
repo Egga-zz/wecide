@@ -2,10 +2,13 @@ package de.egga.wecide.eggs;
 
 import de.egga.wecide.configuration.EggRepository;
 import de.egga.wecide.eggs.repository.EggEntity;
+import de.egga.wecide.eggs.repository.EggEntityMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class EggService {
@@ -14,9 +17,13 @@ public class EggService {
     @Autowired
     EggRepository repository;
 
-    public Page<EggEntity> findAll() {
-        Page<EggEntity> all = repository.findAll(new PageRequest(1, 1));
+    @Autowired
+    EggEntityMapper mapper;
 
-        return all;
+    public List<Egg> list() {
+        Page<EggEntity> entities = repository.findAll(new PageRequest(1, 1));
+        // TODO move mapping to DAO
+        List<Egg> model = mapper.entityToModel(entities);
+        return model;
     }
 }

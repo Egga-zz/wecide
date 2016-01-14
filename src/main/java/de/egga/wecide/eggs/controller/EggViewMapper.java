@@ -2,9 +2,11 @@ package de.egga.wecide.eggs.controller;
 
 import de.egga.wecide.eggs.Egg;
 import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class EggViewMapper {
 
     EggView modelToView(Egg model) {

@@ -8,5 +8,6 @@ import org.springframework.data.repository.Repository;
 public interface EggRepository extends Repository<EggEntity, Integer> {
     // TODO move this interface to entity class
 
+    // TODO evaluate if Page is a good choice
     Page<EggEntity> findAll(Pageable pageable);
 }

@@ -1,11 +1,12 @@
 package de.egga.wecide.eggs.controller;
 
-import de.egga.wecide.eggs.repository.EggEntity;
+import de.egga.wecide.eggs.Egg;
 import de.egga.wecide.eggs.EggService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class EggController {
@@ -13,10 +14,13 @@ public class EggController {
     @Autowired
     EggService service;
 
+    @Autowired
+    EggViewMapper mapper = new EggViewMapper();
+
     @RequestMapping("/eggs")
-    public Page<EggEntity> asd () {
-        // TODO map model to view
-        Page<EggEntity> all = service.findAll();
-        return all;
+    public EggListView list() {
+        List<Egg> all = service.list();
+        EggListView view = mapper.modelToView(all);
+        return view;
     }
 }
