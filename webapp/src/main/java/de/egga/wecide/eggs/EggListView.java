@@ -1,4 +1,4 @@
-package de.egga.wecide.eggs.controller;
+package de.egga.wecide.eggs;
 
 import java.util.ArrayList;
 import java.util.List;

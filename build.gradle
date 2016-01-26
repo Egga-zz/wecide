@@ -27,3 +27,7 @@ idea {
         outputDir = file("$buildDir/classes/main/")
     }
 }
+
+task run (type: GradleBuild) {
+    tasks = ['webapp:run']
+}

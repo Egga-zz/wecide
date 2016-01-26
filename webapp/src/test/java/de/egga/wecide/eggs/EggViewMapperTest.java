@@ -1,7 +1,6 @@
-package de.egga.wecide.eggs.controller;
+package de.egga.wecide.eggs;
 
 import de.egga.wecide.TestBase;
-import de.egga.wecide.eggs.Egg;
 import org.junit.Test;
 
 import java.util.List;
@@ -25,7 +24,7 @@ public class EggViewMapperTest extends TestBase {
 
     @Test
     public void it_should_map_list_of_models_to_view() {
-        EggListView view = mapper.modelToView(asList(model, model, model));
+        de.egga.wecide.eggs.EggListView view = mapper.modelToView(asList(model, model, model));
         List<EggView> items = view.getItems();
         assertThat(items).extracting("name").containsExactly(model.getName(), model.getName(), model.getName());
     }

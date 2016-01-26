@@ -1,7 +1,6 @@
 package de.egga.wecide.eggs;
 
-import de.egga.wecide.configuration.MainConfiguration;
-import de.egga.wecide.eggs.controller.EggView;
+import de.egga.wecide.configuration.WebConfiguration;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.IntegrationTest;
@@ -24,7 +23,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @IntegrationTest
-@SpringApplicationConfiguration(classes = {MainConfiguration.class})
+@SpringApplicationConfiguration(classes = {WebConfiguration.class})
 @WebAppConfiguration
 @ActiveProfiles("local")
 public class EggsTest {

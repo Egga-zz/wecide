@@ -1,7 +1,5 @@
-package de.egga.wecide.eggs.controller;
+package de.egga.wecide.eggs;
 
-import de.egga.wecide.eggs.Egg;
-import de.egga.wecide.eggs.EggService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

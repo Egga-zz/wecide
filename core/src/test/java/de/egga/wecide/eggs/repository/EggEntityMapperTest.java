@@ -16,7 +16,7 @@ public class EggEntityMapperTest extends TestBase {
 
     EggEntityMapper mapper = new EggEntityMapper();
 
-        EggEntity entity = defaultEggEntity();
+    EggEntity entity = defaultEggEntity();
 
     @Test
     public void it_should_map_all_fields_from_entity_to_model() {

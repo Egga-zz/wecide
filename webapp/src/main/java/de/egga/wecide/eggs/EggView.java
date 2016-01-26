@@ -1,4 +1,4 @@
-package de.egga.wecide.eggs.controller;
+package de.egga.wecide.eggs;
 
 public class EggView {
 
